@@ -10,10 +10,6 @@ public class DecimalInt {
 	private int mSize;
 	boolean mNegative;
 	
-	private enum ParsingState {
-		START, SIGN, ZERO, DIGITS
-	}
-	
 	// initialize to zero
 	public DecimalInt() {
 		mData = null;
