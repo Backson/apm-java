@@ -1,9 +1,10 @@
 package de.backson.apm.tests;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.math.BigInteger;
-import java.util.Formatter;
 
 import org.junit.jupiter.api.Test;
 
@@ -121,12 +122,12 @@ class DecimalIntTest {
 		
 		for (long x : data) {
 			String s = String.format("%x", x);
-			assertEquals(new DecimalInt(x), new DecimalInt(""+x));
+			assertEquals(new DecimalInt(x), new DecimalInt(s));
 		}
 		
 		for (long x : data) {
 			String s = String.format("%X", x);
-			assertEquals(new DecimalInt(x), new DecimalInt(""+x));
+			assertEquals(new DecimalInt(x), new DecimalInt(s));
 		}
 
 		assertThrows(RuntimeException.class, () -> new DecimalInt(""));

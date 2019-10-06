@@ -37,7 +37,6 @@ public class DecimalIntParser {
 	
 	private int index;
 	private ParsingState state;
-	private String message;
 	
 	public void parse() {
 		
