@@ -121,12 +121,12 @@ class DecimalIntTest {
 		}
 		
 		for (long x : data) {
-			String s = String.format("%x", x);
+			String s = String.format("%s0x%x", x < 0 ? "-" : "", Math.abs(x));
 			assertEquals(new DecimalInt(x), new DecimalInt(s));
 		}
 		
 		for (long x : data) {
-			String s = String.format("%X", x);
+			String s = String.format("%s0X%X", x < 0 ? "-" : "", Math.abs(x));
 			assertEquals(new DecimalInt(x), new DecimalInt(s));
 		}
 
